@@ -9,9 +9,7 @@ app.set('port', process.env.PORT || 3000);
 //middlewares
 app.use(express.json());
 //importo las rutas
-app.use('/', (req, res) =>
-  res.status(200).send('API del metro de Quito, ruta raiz!')
-);
+
 app.use('/api', routerMetro);
 //en caso de que no encuentre las rutas
 app.use((req, res) => {
